@@ -1,0 +1,35 @@
+@colors {
+	white: 			#f4f9fa;
+	lightgrey:  #dfe3eb;
+	grey:  			#3c4042;
+	darkgrey:  	#2f3233;
+	red: 				#ff6663;
+	green:			#a3f7b5;
+	blue: 			#30bced;
+}
+
+@type {
+	thin: 'Aileron-Thin';
+	bold: 'Aileron-SemiBold';
+	deco: 'BebasNeueBold';
+}
+
+@transition {easing: cubic-bezier(.4,.25,.3,1)}
+
+@custom-media --lg (max-width:1025px);
+@custom-media --md (max-width:775px);
+@custom-media --sm (max-width:425px);
+
+/* global
+----------*/
+body {
+	typeface: thin 16px;
+	colors: darkgrey white;
+}
+
+h1 {typeface: deco 90px blue}
+h2 {typeface: deco 36px green}
+h3 {typeface: thin 30px}
+h4 {typeface: bold 24px}
+h5 {typeface: bold 20px red}
+h6 {typeface: deco 18px}

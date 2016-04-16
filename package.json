@@ -1,0 +1,49 @@
+{
+  "name": "static-boilerplate",
+  "version": "1.0.0",
+  "description": "Static site boilerplate with PostCSS, JavaScript linting, dist optimization and BrowserSync",
+  "main": "./",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udyux/static-boilerplate.git"
+  },
+  "author": "Nicolas Udy <dev@udy.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/udyux/static-boilerplate/issues"
+  },
+  "homepage": "https://github.com/udyux/static-boilerplate",
+  "devDependencies": {
+    "autoprefixer": "^6.3.5",
+    "browser-sync": "^2.11.2",
+    "css-declaration-sorter": "1.4.0",
+    "css-mqpacker": "4.0.1",
+    "cssnano": "^3.5.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "2.6.0",
+    "gulp-include": "2.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "1.2.2",
+    "gulp-replace": "0.5.4",
+    "gulp-svg-sprite": "1.2.19",
+    "gulp-uglify": "1.5.3",
+    "jshint": "2.9.1",
+    "jshint-stylish": "2.1.0",
+    "postcss-alias": "0.2.2",
+    "postcss-alias-atrules": "0.0.0",
+    "postcss-color-alpha": "1.0.3",
+    "postcss-custom-media": "5.0.1",
+    "postcss-define-property": "https://github.com/udyux/postcss-define-property.git",
+    "postcss-extend": "1.0.1",
+    "postcss-import": "8.0.2",
+    "postcss-nested": "1.0.0",
+    "postcss-position-alt": "0.3.0",
+    "postcss-pxtorem": "3.3.1",
+    "postcss-short-data": "1.0.0"
+  }
+}
