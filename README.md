@@ -60,6 +60,7 @@ The plugins used are:
 * [postcss-nested](https://github.com/postcss/postcss-nested) - use SASS style nested syntax
 * [postcss-position-alt](https://github.com/sylvainbaronnet/postcss-position-alt) - shorthand position syntax
 * [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) - transforms `px` font-sizes to `rem` based on 16px root size
+* [postcss-sassy-mixins](https://github.com/andyjansson/postcss-sassy-mixins) - SASS style mixins
 * [postcss-short-data](https://github.com/jonathantneal/postcss-short-data) - select `#app[data-state='open']` with `#app[:state='open']`
 
 
@@ -83,6 +84,10 @@ The **compiled file** `all.css` will be in the root directory.
 * [`./dev/pcss/main.pcss`](dev/pcss/main.pcss)
 
 	This file is intended to be used for overall styles.
+
+* [`./dev/pcss/parts/reset.pcss`](dev/pcss/parts/reset.pcss)
+
+	This is an actual reset and not a normalized CSS. It sets nearly all defaults to 0. All elements have their position set to `relative` by default and their box-sizing is set to `border-box`.
 
 
 ###Settings
@@ -173,6 +178,29 @@ main p span:hover {
 }
 ```
 
+####Mixins
+Use SASS style mixins thanks to [postcss-sassy-mixins](https://github.com/andyjansson/postcss-sassy-mixins)
+######Input
+```css
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+```
+######Output
+```css
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+```
+
 ####Extending
 Extend using the `%` silent placeholder:
 ######Input
@@ -247,7 +275,7 @@ span.btn {
 
 ####Custom properties
 Custom properties allow for shorthand syntax to be expanded based on variables. In the descriptions below, the expected property values are indicated with `$`.
-```
+```css
 /* this guide says */
 size: $width $height;
 

@@ -29,6 +29,7 @@ var pcss = {
 	nested: 		require('postcss-nested'),
 	position: 	require('postcss-position-alt'),
 	pxRem: 			require('postcss-pxtorem'),
+	mixins: 		require('postcss-sassy-mixins'),
 	dataSelect: require('postcss-short-data')
 };
 
@@ -68,6 +69,7 @@ gulp.task('css', function() {
 		pcss.mediaAlias,
 		pcss.nested,
 		pcss.extend,
+		pcss.mixins,
 		pcss.dataSelect,
 		pcss.pxRem,
 		pcss.mqpacker,

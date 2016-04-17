@@ -44,6 +44,7 @@
     "postcss-nested": "1.0.0",
     "postcss-position-alt": "0.3.0",
     "postcss-pxtorem": "3.3.1",
+    "postcss-sassy-mixins": "2.0.0",
     "postcss-short-data": "1.0.0"
   }
 }
