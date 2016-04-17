@@ -118,8 +118,6 @@ The [settings](dev/pcss/settings.pcss) file allows for a quick setup and easy ac
 
 
 ###Syntax
-You could write your CSS normally. Custom syntax and shortcuts are described below.
-
 ####Nesting
 You can nest your CSS as you would with SASS. This also applies to media queries.
 ######Input
