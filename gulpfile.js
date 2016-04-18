@@ -142,20 +142,25 @@ gulp.task('build', ['html', 'css', 'js']);
 
 /* browser sync
 ----------------*/
+var sync = function() {
+	browserSync.reload();
+};
+
+gulp.task('css:live', ['css'], sync);
+gulp.task('js:live', ['js:app'], sync);
+gulp.task('html:live', ['html'], sync);
+
 gulp.task('live', ['build'], function () {
 	var project_path = __dirname.split('/');
 	var project = 'localhost/' + project_path[project_path.length-1];
-	var sync = function() {
-		browserSync.reload();
-	};
 
   browserSync.init({
   	proxy: project
   });
 
-  gulp.watch('./dev/app.js', ['js:app'], sync);
-  gulp.watch('./dev/pcss/**/*.pcss', ['css'], sync);
-  gulp.watch('./dev/*.html', ['html'], sync);
+  gulp.watch('./dev/app.js', ['js:live']);
+  gulp.watch('./dev/pcss/**/*.pcss', ['css:live']);
+  gulp.watch('./dev/*.html', ['html:live']);
 });
 
 
